@@ -1,4 +1,4 @@
-# System-wide configuration constants and tuning parameters.
+"""System-wide configuration constants and tuning parameters."""
 
 # Document targets searched for initial workspace context
 DOC_NAME = ("AGENTS.md", "README.md", "pyproject.toml", "package.json", "Cargo.toml")

@@ -1,4 +1,4 @@
-# Domain-specific exception hierarchy for Mini Coding Agent.
+"""Domain-specific exception hierarchy for Mini Coding Agent."""
 
 class AgentError(Exception):
     """Base exception for all agent harness errors."""

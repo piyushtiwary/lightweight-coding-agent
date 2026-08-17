@@ -1,4 +1,4 @@
-# Context budgeting, string trimming, and formatting utilities.
+"""Context budgeting, string trimming, and formatting utilities."""
 
 from datetime import datetime, timezone
 
