@@ -1,7 +1,7 @@
 """System-wide configuration constants and tuning parameters."""
 
 # Document targets searched for initial workspace context
-DOC_NAME = ("AGENTS.md", "README.md", "pyproject.toml", "package.json", "Cargo.toml")
+DOC_NAMES = ("AGENTS.md", "README.md", "pyproject.toml", "package.json", "Cargo.toml")
 
 
 # Tool execution and prompt context budget limits
