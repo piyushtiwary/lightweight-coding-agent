@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 from mini_coding_agent.constants import MAX_TOOL_OUTPUT
 
 
-def utc_now() ->str:
+def now_utc() ->str:
     """Return the current UTC timestamp formatted as ISO-8601(YY-MM-DD) string"""
     
     return datetime.now(timezone.utc).isoformat()
