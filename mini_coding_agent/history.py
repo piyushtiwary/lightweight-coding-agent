@@ -26,11 +26,11 @@ class HistoryFormatter:
 
         lines: List[str] = []
         seen_reads: Set[str] = set()
-        recent_star = max(0, len(history) - 6)
+        recent_start = max(0, len(history) - 6)
 
 
         for index, item in enumerate(history):
-            is_recent = index >= recent_star
+            is_recent = index >= recent_start
             role = item.get("role", "unknown")
 
             # Invalidate cached read deduplication if a mutating tool was executed
@@ -49,7 +49,7 @@ class HistoryFormatter:
             if role == "tool":
                 limit = 900 if is_recent else 100
                 tool_name = item.get('name', 'unknown')
-                args_json = json.dump(item.get('args', {}), sort_keys=True)
+                args_json = json.dumps(item.get('args', {}), sort_keys=True)
                 lines.append(clip(item.get("context", ""), limit))
 
             else:
