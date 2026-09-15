@@ -26,11 +26,11 @@ class ToolValidator:
     """Validated runtime arguments against tool schema constraints"""
 
     @staticmethod
-    def validate_list_files(args: Dict[str, Any]) -> None:
+    def validate_list_file(args: Dict[str, Any]) -> None:
         pass  # Path resolution is validated during execution
 
     @staticmethod
-    def validate_read_files(args: Dict[str, Any]) -> None:
+    def validate_read_file(args: Dict[str, Any]) -> None:
         if "path" not in args or not str(args["path"]).strip():
             raise ToolValidationError("missing required argument 'path'")
 
@@ -75,7 +75,7 @@ class ToolValidator:
             raise ToolValidationError("missing required argument 'content'")
 
     @staticmethod
-    def valid_path_file(args: Dict[str, Any]) -> None:
+    def validate_patch_file(args: Dict[str, Any]) -> None:
         if "path" not in args or not str(args["path"]).strip():
             raise ToolValidationError("missing required argument 'path'")
 
